@@ -1,0 +1,9 @@
+
+You are now given the csv where their names have the following format:
+
+sum_<starting integer>_<ending integer>.csv
+
+These csv records the sum of integers from <starting integer> to <ending integer>. 
+Try to combine the data in different csv to a new csv with name sum_combined.csv with
+the same headers in each of the csv and calculate the final sum. Store it as the last 
+of the combined csv and output it after the combination of csv.  
