@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CODE_DIR="./Code"
-OUTPUT_FILE="./output.txt"
+OUTPUT_FILE="./output.csv"
 
 # -j                 - # of concurrency 
 # flock $FileName    - ensure only 1 thread to execute on $FileName (-x ensure 1 process can hold at a time) 
