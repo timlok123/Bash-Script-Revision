@@ -4,7 +4,7 @@ You are now given the csv where their names have the following format:
 `sum_<starting integer>_<ending integer>.csv`
 
 1. These csv records the sum of integers from `<starting integer>` to `<ending integer>`. 
-   Do the following 
+   Do the following, 
    - Combine the data in different csv to a new csv with name `sum_combined.csv` with
    the same headers in each of the csv 
    - Let the user check before combining the csv 
