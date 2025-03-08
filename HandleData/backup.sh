@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # Ensure the backup directory exist 
-BACKUP_DIR="./BackUp"
 CURR_DIR=$(pwd)
+DATA_DIR="${CURR_DIR}/DataAndCode"
+BACKUP_DIR="${CURR_DIR}/BackUp"
 
 if [ -d "$BACKUP_DIR" ]
 then 
@@ -13,7 +14,7 @@ else
 fi 
 
 # Copy the csv file there 
-if find "$CURR_DIR" -type f -regex "$CURR_DIR/sum_[0-9]+_[0-9]+\.csv"| xargs -I {} cp {} $BACKUP_DIR
+if find "$CURR_DIR" -type f -regex "${DATA_DIR}/sum_[0-9]+_[0-9]+\.csv"| xargs -I {} cp {} $BACKUP_DIR
 then
     echo "Files copied successfully."
     echo "Below are the content of the $BACKUP_DIR, "

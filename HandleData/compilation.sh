@@ -4,7 +4,8 @@
 
 # Show the current working directory 
 CURR_DIR=$(pwd)
-echo -e "You are now at: $CURR_DIR \n"
+cd "${CURR_DIR}/DataAndCode"
+echo "Change to the directory: $(pwd)"  
 
 # Compilation & checking 
 g++ sum.cpp -o sum
@@ -15,3 +16,5 @@ then
 else
     echo "Compilation succeeds !"
 fi 
+
+cd "$CURR_DIR"

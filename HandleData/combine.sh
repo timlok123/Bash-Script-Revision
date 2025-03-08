@@ -36,7 +36,8 @@ do
     fi
 done
 
-for file in $(find $CURR_DIR -type f -regex "${CURR_DIR}/sum_[0-9]+_[0-9]+.csv"); 
+echo "Starting integer, ending integer, Sum" >> "$OUTPUT_CSV_File"
+for file in filelist; 
 do
     # Extract the base name from the full path
     basename=$(basename "$file")
@@ -54,17 +55,17 @@ done
 # END {print sum} - show the sum after processing all lines
 column_sum=$(
     awk -F, '
-    NR > 0 { 
+    NR > 1 { 
         sum += $3 
     }
     END {
     print "The sum is " sum 
-    }' "$OUTPUT_CSV_File" 
+    }' "${OUTPUT_CSV_File}" 
 )
 echo $column_sum >> $OUTPUT_CSV_File
 
 # show the content & info the combined file
-echo "Below is the content of $OUTPUT_CSV_File, " 
+echo -e "Below is the content of $OUTPUT_CSV_File, \n " 
 cat $OUTPUT_CSV_File
 
 
