@@ -13,3 +13,6 @@ that you might use Bash and attach my answer for the tasks
 3. GNU parallel (GNUParallel) - Run the executable with multiple processes 
 
 Feel free to contact me if you have any ideas or if you want to contribute to this repository as well! 
+
+## Links to other relevant repositories 
+1. [COMP2113 Group Project](https://github.com/timlok123/COMP2113-Course-Code) 
